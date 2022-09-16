@@ -22,6 +22,7 @@ after the install the baileys-api you need to extract the sources.zip to the fol
 
 after the extractation is complate copy the contents of the sql.txt and run it on sql it will set the database for usage.
 
+edit the config.php file and it's ready to use
 
 open http://localhost/Wp-bulk-message-sender/index.php and product is ready for usage.
 
