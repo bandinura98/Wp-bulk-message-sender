@@ -36,17 +36,7 @@ include 'header.php';
         </div>
     </div>
     <!-- Page Header End -->
-    <form action="http://localhost:8000/sessions/add" method="POST">
-        <input type="hidden" name="id" value="john">
-        <input type="hidden" name="isLegacy" value="false">
-
-
-        <button type="submit" class="btn btn-primary">CREATE SESSION</button>
-    </form>
-    <!--<button type="button" class="btn btn-danger">DELETE SESSION</button>
-    <button type="button" class="btn btn-warning">FIND SESSION</button>
-    <button type="button" class="btn btn-info">CREDITS</button>-->
-    
+  
     <script>
         function creatificationOfTheSession(){
             var datax = {'id':'john2', 'isLegacy':'false'};
