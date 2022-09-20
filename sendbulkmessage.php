@@ -104,7 +104,6 @@ $params = array(
     "location" => "Istanbul" 
 );
  
-//echo httpPost("http://localhost:8000/chats/send?id=john",$params);
 
 
 
@@ -130,18 +129,19 @@ if ($result->num_rows > 0) {
             "message" => array(
                 "text" => $decoded['message']
             )
-        );
-        httpPost('http://localhost:8000/chats/send?id=john',$parameters);
+        );  echo 'http://localhost:8000/chats/send?id='.$decoded["ses"];
+        httpPost('http://localhost:8000/chats/send?id='.$decoded["ses"],$parameters);
     }else{
         $parameters = array( 
             "receiver" => $row["phone"], 
             "message" => array(
                 "image" => array(
-                    "url" => 'http://localhost/wpproject/t/'.$decoded["image"]
+                    "url" => 'http://localhost/wpproject/Wp-bulk-message-sender/'.$decoded["image"],
                 ),
                 "caption" => $decoded['message']
             )
         );
+        print_r($parameters);
         httpPost('http://localhost:8000/chats/send?id=john',$parameters);
     }
 

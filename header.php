@@ -69,6 +69,7 @@
                     <a href="person.php" class="nav-item nav-link">Persons</a>
                     <a href="group.php" class="nav-item nav-link">Groups</a>
                     <a href="sendimsgbulk.php" class="nav-item nav-link">Send Message</a>
+                    <a href="sessions.php" class="nav-item nav-link">sessions</a>
                 </div>
             </div>
         </nav>

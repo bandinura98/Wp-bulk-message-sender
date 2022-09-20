@@ -36,22 +36,49 @@ include 'config.php';
         <select class="form-select" aria-label="Default select example" id="selector">
             <option selected>Select grup</option>
             <?php
-                            $sql = "SELECT * FROM new_schema.groups;";
-                            $result = $conn->query($sql);
-                            if ($result->num_rows > 0) {
-                              // output data of each row
-                              while($row = $result->fetch_assoc()) {
-                                
-                                ?>
-                                <option value=<?php echo "'". $row["idgroups"] ."'"; ?>><?php echo $row["groupname"]; ?></option>
-                                <?php
-                                
-                              }
-                            } else {
-                              echo "0 results";
-                            }
-                            $conn->close();
+                $sql = "SELECT * FROM new_schema.groups;";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                    
+                    ?>
+                    <option value=<?php echo "'". $row["idgroups"] ."'"; ?>><?php echo $row["groupname"]; ?></option>
+                    <?php
+                    
+                    }
+                } else {
+                    echo "0 results";
+                }
+                
+            ?>
+        </select>
+        </div>
+
+
+        <div class="row">
+            <h2>GRUP</h2>
+        </div>
+        <div class="row">
+        <select class="form-select" aria-label="Default select example" id="sessions">
+            <option selected>Select grup</option>
+            <?php
+                $sql = "SELECT * FROM new_schema.sessions;";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                    
                         ?>
+                        <option value=<?php echo "'". $row["idses"] ."'"; ?>><?php echo $row["sessionname"]; ?></option>
+                        <?php
+                    
+                    }
+                } else {
+                    echo "0 results";
+                }
+                $conn->close();
+            ?>
         </select>
         </div>
         
@@ -101,6 +128,15 @@ include 'config.php';
         var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
         var selectedimage = "";
         
+
+        var sel = document.getElementById("sessions");
+        var sessions= sel.options[sel.selectedIndex].text;
+
+        
+        
+
+        
+
         for (var i = 0; i < checkboxes.length; i++) {
             console.log(checkboxes[i].value);
             selectedimage = checkboxes[i].value;
@@ -113,7 +149,7 @@ include 'config.php';
         var selectedopt = document.getElementById("selector").value;
         //console.log(selectedopt);
 
-        var datax = {'image':selectedimage, 'grupid':selectedopt, 'message':text};
+        var datax = {'image':selectedimage, 'grupid':selectedopt, 'message':text, 'ses':sessions};
 
         $.ajax({
                 type : "POST",  //type of method
