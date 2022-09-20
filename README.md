@@ -1,4 +1,4 @@
-Wp-bulk-message-sender V1.1.1
+Wp-bulk-message-sender V2.0.0
 
 
 REQUIREMENTS
@@ -28,7 +28,7 @@ open http://localhost/Wp-bulk-message-sender/index.php and product is ready for 
 
 USAGE:
 first of all start the baileys-api
-in index page there is a CREATE SESSION button click that and create session
+in sessions page there is a CREATE SESSION button click that and create session
 than goto persons page add some person with name than goto groups and add groups and edit groups(group-person)
 than (optionally) goto the documents page and add some images (it can be used to send messages with)
 finally goto send message page it sends messages to the group of numbers optionally with or withouth images
@@ -36,4 +36,3 @@ finally goto send message page it sends messages to the group of numbers optiona
 New relase notes :
 
 in order to use the software config.php must be edited.
-In index page there is a new button which is creating a session
