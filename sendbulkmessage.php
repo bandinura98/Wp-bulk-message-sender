@@ -136,7 +136,7 @@ if ($result->num_rows > 0) {
             "receiver" => $row["phone"], 
             "message" => array(
                 "image" => array(
-                    "url" => 'http://localhost/wpproject/Wp-bulk-message-sender/'.$decoded["image"],
+                    "url" => dirname(__FILE__)."\\".$decoded["image"],
                 ),
                 "caption" => $decoded['message']
             )
