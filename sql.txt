@@ -39,7 +39,7 @@ CREATE TABLE `new_schema`.`whatsapp` (
 
 
 
-CREATE TABLE `sessions` (
+CREATE TABLE `new_schema`.`sessions` (
   `sessionname` varchar(45) DEFAULT NULL,
   `idses` int NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`idses`)
